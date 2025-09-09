@@ -1,0 +1,22 @@
+# Create this file with:
+# sudo nano /etc/systemd/system/powertrain-daq-private.service
+
+[Unit]
+Description=Powertrain DAQ Project
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+ExecStart=/bin/bash /home/pi/Autostartup.sh
+WorkingDirectory=/home/pi/powertrain-daq-private
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
+
+#run the commands below after saving the file, it will reload lists of services, enable the file as a service and start it immediately (as opposed to next reboot).
+# sudo systemctl daemon-reload
+# sudo systemctl enable powertrain-daq-private.service
+# sudo systemctl start powertrain-daq-private.service
