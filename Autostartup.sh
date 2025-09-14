@@ -10,7 +10,7 @@
 PROJECT_DIR="/home/pi/powertrain-daq-private"   # project root folder
 VENV_DIR="$PROJECT_DIR/venv"                    # virtual environment path
 MAIN_SCRIPT="$PROJECT_DIR/main.py"              # main Python script
-LOG_FILE="/home/pi/daq_log.txt"                 # log file for all messages
+LOG_FILE="/home/pi/daq_errlog.txt"                 # log file for all messages
 
 # -------------------------------
 # Start logging
