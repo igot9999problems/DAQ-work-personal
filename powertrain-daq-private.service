@@ -10,7 +10,12 @@ Wants=network-online.target
 ExecStart=/bin/bash /home/pi/Autostartup.sh
 WorkingDirectory=/home/pi/powertrain-daq-private
 Restart=always
+RestartSec=5    #wait 5s before restart to prevent crash loops thing
 User=pi
+StandardOutput=append:/home/pi/daq_errlog.txt
+StandardError=append:/home/pi/daq_errlog.txt
+
+#StandardOutput & StandardError direct logs straight to your file in addition to journald, which is a built in systemd query to log errors.
 
 [Install]
 WantedBy=multi-user.target
