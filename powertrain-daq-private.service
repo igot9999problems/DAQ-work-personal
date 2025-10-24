@@ -7,13 +7,13 @@ After=network-online.target tailscaled.service
 Wants=network-online.target
 
 [Service]
-ExecStart=/bin/bash /home/pi/Autostartup.sh
-WorkingDirectory=/home/pi/powertrain-daq-private
+ExecStart=/bin/bash /home/hyperballin/Autostartup.sh
+WorkingDirectory=/home/hyperballin/powertrain-daq-private
 Restart=always
 RestartSec=5    #wait 5s before restart to prevent crash loops thing
-User=pi
-StandardOutput=append:/home/pi/daq_errlog.txt
-StandardError=append:/home/pi/daq_errlog.txt
+User=hyperballin
+StandardOutput=append:/home/hyperballin/daq_errlog.txt
+StandardError=append:/home/hyperballin/daq_errlog.txt
 
 #StandardOutput & StandardError direct logs straight to your file in addition to journald, which is a built in systemd query to log errors.
 

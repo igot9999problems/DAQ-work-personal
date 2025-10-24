@@ -1,5 +1,5 @@
 # Create this file with:
-# nano /home/pi/Autostartup.sh
+# nano /home/hyperballin/Autostartup.sh
 
 #!/bin/bash
 # Startup script to activate Python venv and run project with logging & checks
@@ -7,10 +7,10 @@
 # -------------------------------
 # Configurable variables
 # -------------------------------
-PROJECT_DIR="/home/pi/powertrain-daq-private"   # project root folder
+PROJECT_DIR="/home/hyperballin/powertrain-daq-private"   # project root folder
 VENV_DIR="$PROJECT_DIR/venv"                    # virtual environment path
 MAIN_SCRIPT="$PROJECT_DIR/main.py"              # main Python script
-LOG_FILE="/home/pi/daq_errlog.txt"                 # log file for all messages
+LOG_FILE="/home/hyperballin/daq_errlog.txt"                 # log file for all messages
 
 # -------------------------------
 # Start logging
